@@ -123,6 +123,10 @@ nav{
 .profile-item{
     margin-right: 30px;
 }
+.profile-item h3{
+    margin-top: 30px;
+    margin-bottom: 11px;
+}
 .profile-item:last-child{
     margin-right: 0;
 }
@@ -145,8 +149,37 @@ nav{
     opacity: 0;
     transition: opacity .5s;
 }
-.profile-photo:hover::before{
+.profile-photo:hover::before,
+.profile-photo:hover .social{
     opacity: 1;
+}
+.social{
+    position: absolute;
+    display: flex;
+    top: calc(50% - 28px);
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.social li{
+    width: 57px;
+    height: 57px;
+    margin-left: 1px;
+    background-color: #FCE38A;
+    transition:  background-color .3s;
+}
+.social li:hover{
+    background-color: #95E1D3;
+}
+.social a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.social img{
+    height: 26px;
 }
 
 /* Footer */
@@ -158,7 +191,7 @@ nav{
     position: absolute;
     width: 150px;
     height: 40px;
-    left: 1410px;
+    left: 1240px;
     top: 1568px;
     border: none;
     color: #fff;
@@ -170,7 +203,7 @@ nav{
     position: absolute;
     width: 230px;
     height: 39px;
-    left: 1180px;
+    left: 1010px;
     top: 1569px;
     border: 1px solid #B6B6B6;
     font-family: Roboto;
@@ -184,7 +217,7 @@ nav{
     position: absolute;
     width: 1200px;
     height: 1px;
-    left: 360px;
+    left: 180px;
     top: 1558px;
     border: 1px solid #B6B6B6
 }
@@ -192,7 +225,7 @@ nav{
     position: absolute;
     width: 297px;
     height: 17px;
-    left: 360px;
+    left: 180px;
     top: 1581px;
     font-family: Montserrat;
     font-size: 14px;
@@ -202,10 +235,6 @@ nav{
 span{
     color: #F38181;
 }
-.social{
-    position: absolute;
-    height: 57px;
-    display: flex;
-    top: calc(50% - 28px);
-    left: 50%;
+footer input:focus{
+    outline: none;
 }
